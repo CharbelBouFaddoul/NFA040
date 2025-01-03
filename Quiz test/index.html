@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Css link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- script link -->
+    <script src="script.js" defer></script>
+    <title>Quiz</title>
+</head>
+
+<body>
+
+    <main>
+        <form>
+            <section>
+                <h2>General Knowledge Quiz</h2>
+
+                <div>
+                    <p>The Earth is the third planet from the Sun.</p>
+                    <input type="radio" name="q1" value="True"><span>True</span> <br>
+                    <input type="radio" name="q1" value="False"><span>False</span>
+                </div>
+
+                <div>
+                    <p>The Great Wall of China is visible from space.</p>
+                    <input type="radio" name="q2" value="True"><span>True</span> <br>
+                    <input type="radio" name="q2" value="False"><span>False</span>
+                </div>
+
+                <div>
+                    <p>The capital of Canada is Toronto.</p>
+                    <input type="radio" name="q3" value="True"><span>True</span> <br>
+                    <input type="radio" name="q3" value="False"><span>False</span>
+                </div>
+
+                <div>
+                    <p>Water boils at 100°C at sea level.</p>
+                    <input type="radio" name="q4" value="True"><span>True</span> <br>
+                    <input type="radio" name="q4" value="False"><span>False</span>
+                </div>
+
+                <div>
+                    <p>Penguins are found in the Arctic.</p>
+                    <input type="radio" name="q5" value="True"><span>True</span> <br>
+                    <input type="radio" name="q5" value="False"><span>False</span>
+                </div>
+            </section>
+
+            <section>
+                <h2>History Quiz</h2>
+
+                <div>
+                    <p>What is the capital of France?</p>
+                    <input type="radio" name="q6" value="Paris"> <span>Paris</span> <br>
+                    <input type="radio" name="q6" value="London"> <span>London</span> <br>
+                    <input type="radio" name="q6" value="Berlin"> <span>Berlin</span> <br>
+                    <input type="radio" name="q6" value="Madrid"> <span>Madrid</span>
+                </div>
+
+                <div>
+                    <p>What are the colors of the French flag?</p>
+                    <input type="checkbox" name="q7" value="Red"> <span>Red</span> <br>
+                    <input type="checkbox" name="q7" value="Blue"> <span>Blue</span> <br>
+                    <input type="checkbox" name="q7" value="White"> <span>White</span> <br>
+                    <input type="checkbox" name="q7" value="Green"> <span>Green</span>
+                </div>
+
+                <div>
+                    <p>What are the wonders of the ancient world?</p>
+                    <input type="checkbox" name="q8" value="Great Pyramid of Giza"> <span>Great Pyramid of Giza</span> <br>
+                    <input type="checkbox" name="q8" value="Hanging Gardens of Babylon"> <span>Hanging Gardens of Babylon</span> <br>
+                    <input type="checkbox" name="q8" value="Statue of Zeus at Olympia"> <span>Statue of Zeus at Olympia</span> <br>
+                    <input type="checkbox" name="q8" value="Temple of Artemis at Ephesus"> <span>Temple of Artemis at Ephesus</span> <br>
+                    <input type="checkbox" name="q8" value="Mausoleum at Halicarnassus"> <span>Mausoleum at Halicarnassus</span> <br>
+                    <input type="checkbox" name="q8" value="Colossus of Rhodes"> <span>Colossus of Rhodes</span> <br>
+                    <input type="checkbox" name="q8" value="Lighthouse of Alexandria"> <span>Lighthouse of Alexandria</span>
+                </div>
+            </section>
+
+            <div class="Buttons">
+                <button onclick="checkAnswers()">Submit</button>
+                <input type="reset">
+            </div>
+        </form>
+    </main>
+
+</body>
+
+</html>

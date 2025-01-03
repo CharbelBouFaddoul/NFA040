@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+}
+
+section{
+    margin-bottom: 70px;
+}
+
+section h2{
+    text-decoration: underline;
+    color: red;
+}
+
+section div{
+    margin-top: 30px;
+}
+
+section div p{
+    font-weight: bold;
+    color: blue;
+}
+
+form .Buttons{
+    display: flex;
+    gap: 20px;
+}
+
+form .Buttons button, form .Buttons input{
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 7px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+form .Buttons input{
+    background-color: gray;
+}
