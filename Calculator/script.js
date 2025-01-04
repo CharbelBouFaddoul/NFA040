@@ -1,5 +1,4 @@
 const expression = document.querySelector(".calcOutput");
-let resetOutput = false;
 
 function Press(a){
     const operators = ["+", "-", "x", "/"];
@@ -11,14 +10,10 @@ function Press(a){
 
     if (currentContent.length < 17) {
         expression.innerHTML += a;
-        resetOutput = false;
     }
 }
 
 function Del(){
-    if (resetOutput){
-        expression.innerHTML = "";
-    }
     expression.innerHTML = expression.textContent.trim().slice(0,-1);
 }
 
@@ -36,7 +31,6 @@ function equal(){
         }
 
         expression.innerHTML = result;
-        resetOutput = true;
     } catch (error){
         alert('Enter a valid expression!');
         Reset();
