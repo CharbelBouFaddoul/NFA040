@@ -1,7 +1,7 @@
 const expression = document.querySelector(".calcOutput");
 
 function Press(a){
-    const operators = ["+", "-", "x", "/"];
+    const operators = ["+", "-", "x", "÷"];
     let currentContent = expression.textContent.trim();
 
     if (operators.includes(a) && operators.includes(currentContent.slice(-1))) {
@@ -23,7 +23,7 @@ function Reset(){
 
 function equal(){
     try{
-        const sanitizedExpression = expression.innerHTML.replace(/x/g, '*');
+        const sanitizedExpression = expression.innerHTML.replace(/x/g, '*').replace(/÷/g, '/');
         const result = eval(sanitizedExpression);
 
         if (isNaN(result) || result === undefined || !isFinite(result)) {
