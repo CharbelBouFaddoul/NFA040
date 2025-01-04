@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,58 +12,99 @@ body {
     align-items: center;
 }
 
-main{
-    width: 100vw;
+main {
+    width: 100%;
     height: 100vh;
     text-align: center;
 }
 
-#Calculator{
+#Calculator {
     display: grid;
-    grid-template-rows: 90px 300px;
-    grid-gap: 20px;
+    grid-template-rows: 90px auto;
+    gap: 20px;
+    width: 90%;
+    max-width: 400px;
 }
 
-#Calculator .calcOutput{
+#Calculator .calcOutput {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 20px;
-    font-size: clamp(1.6rem, 2vw, 2rem);
+    font-size: 1.9rem;
     font-weight: bold;
     background-color: #182034;
     border-radius: 8px;
     color: white;
+    white-space: nowrap;
 }
 
-#Calculator .userInput{
+#Calculator .userInput {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
+    gap: 10px;
     background-color: #232C43;
     color: #444B5A;
     padding: 20px;
     border-radius: 8px;
 }
 
-#Calculator .userInput button{
+#Calculator .userInput button {
     background-color: #FFFFFF;
     font-weight: 700;
-    font-size: 25px;
+    font-size: 1.5rem;
     border-radius: 6px;
     border: none !important;
+    padding: 10px;
+    transition: background-color 0.3s ease, transform 0.2s;
 }
 
-#Calculator .userInput .wide{
+#Calculator .userInput button:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+#Calculator .userInput .wide {
     grid-column: span 2;
 }
 
-#Calculator .userInput .RESET, #Calculator .userInput .DEL{
+#Calculator .userInput .RESET,
+#Calculator .userInput .DEL {
     background-color: #516388;
     color: white;
 }
 
-#Calculator .userInput .equal{
+#Calculator .userInput .equal {
     background-color: red;
     color: white;
+}
+
+/* Add media queries for smaller screens */
+@media (max-width: 768px) {
+    #Calculator {
+        gap: 15px;
+        max-width: 85%;
+    }
+
+    #Calculator .calcOutput {
+        font-size: 2rem;
+        padding: 15px;
+    }
+
+    #Calculator .userInput button {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 450px) {
+    #Calculator .calcOutput {
+        font-size: 1.3rem;
+        padding: 10px;
+    }
+
+    #Calculator .userInput button {
+        font-size: 1rem;
+        padding: 6px;
+    }
 }
