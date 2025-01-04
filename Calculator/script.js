@@ -8,7 +8,7 @@ function Press(a){
         return;
     }
 
-    if (currentContent.length < 17) {
+    if (currentContent.length < 20) {
         expression.innerHTML += a;
     }
 }
