@@ -1,4 +1,5 @@
 const expression = document.querySelector(".calcOutput");
+// used for resetting expression after result when clicking 'DEL' button
 let resetOutput = false;
 
 function Press(a){
