@@ -4,6 +4,8 @@ function Press(a){
     const operators = ["+", "-", "x", "÷"];
     let currentContent = expression.textContent.trim();
 
+    if (currentContent.length === 0 && operators.includes(a)) return;
+
     if (operators.includes(a) && operators.includes(currentContent.slice(-1))) {
         expression.innerHTML = currentContent.slice(0,-1).replace(a);
     }
@@ -14,7 +16,13 @@ function Press(a){
 }
 
 function Del(){
-    expression.innerHTML = expression.textContent.trim().slice(0,-1);
+    let currentContent = expression.textContent.trim();
+
+    if (currentContent.length == 2 && currentContent.slice(0,1) == '-'){
+        expression.innerHTML = "";
+        return;
+    }
+    expression.innerHTML = currentContent.slice(0,-1);
 }
 
 function Reset(){
