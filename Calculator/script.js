@@ -5,7 +5,7 @@ function Press(a){
     let currentContent = expression.textContent.trim();
 
     if (operators.includes(a) && operators.includes(currentContent.slice(-1))) {
-        return;
+        expression.innerHTML = currentContent.slice(0,-1).replace(a);
     }
 
     if (currentContent.length < 20) {
