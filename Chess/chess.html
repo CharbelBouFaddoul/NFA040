@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+    <style type="text/css">
+        table{
+            border: 10px solid #202020;
+            width:1000px;height:1000px;
+            border-radius: 10px;
+        }
+
+        .b{
+            width:100px;
+            height:100px;
+            text-align: center;
+            background-image: url("image/Bluetile.png");
+            background-size: cover;
+        }
+
+        .w{
+            width:100px;
+            height:100px;
+            text-align: center;
+            background-image : url("image/Whitetile.png");
+            background-size: cover;
+        }
+
+        img{
+            width: 30%;
+            height: auto;
+            filter: drop-shadow(2px 2px 2px black);
+        }
+  </style>
+</head>
+<body>
+
+    <script>
+
+        const pieces = {
+            black: ['BW.png', 'BC.png', 'BD.png', 'BK.png', 'BQ.png', 'BD.png', 'BC.png', 'BW.png'],
+            white: ['WW.png', 'WC.png', 'WD.png', 'WK.png', 'WQ.png', 'WD.png', 'WC.png', 'WW.png'],
+            pawn: { black: 'BD.png', white: 'WD.png' }
+        };
+
+        const board = document.createElement("table");
+
+        for (let row=0; row<8; row++){
+            let backBoard_row = document.createElement("tr");
+
+            for (let col=0; col<8; col++){
+                let backBoard_col = document.createElement("td");
+
+                if (row === 0) backBoard_col.innerHTML = `<img src=image/${pieces['black'][col]} />`;
+                else if (row === 1) backBoard_col.innerHTML = `<img src=image/${pieces['pawn']['black']} />`;
+                else if (row === 6) backBoard_col.innerHTML = `<img src=image/${pieces['pawn']['white']} />`;
+                else if (row === 7) backBoard_col.innerHTML = `<img src=image/${pieces['white'][col]} />`;
+
+                if ((row+col)%2 === 0){
+                    backBoard_col.className = "w";
+                    backBoard_row.appendChild(backBoard_col);
+                } else {
+                    backBoard_col.className = "b";
+                    backBoard_row.appendChild(backBoard_col);
+                }
+            }
+
+            board.appendChild(backBoard_row);
+        }
+
+        document.body.appendChild(board);
+
+    </script>
+</body>
+</html>
